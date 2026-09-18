@@ -1,5 +1,4 @@
 name = "thebookstop-ca"
-account_id = "464e4732d387a5356cd347f5d6b110e2"
 compatibility_date = "2025-02-01"
 compatibility_flags = ["nodejs_compat"]
 pages_build_output_dir = "dist"
