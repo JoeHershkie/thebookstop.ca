@@ -1,0 +1,96 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import PlannerCustomizer from '../components/PlannerCustomizer';
+import MarketSchedule from '../components/MarketSchedule.astro';
+import BookShowcase from '../components/BookShowcase.astro';
+import StorySection from '../components/StorySection.astro';
+import { BookOpen, Sparkles, CheckCircle2, ShieldCheck, Heart } from 'lucide-react';
+---
+
+<BaseLayout>
+  <!-- 1. Hero Section -->
+  <Hero />
+
+  <!-- 2. Planner Customization & Ordering Section -->
+  <section id="planners" class="py-16 md:py-24 bg-[#fbf8f3] border-t border-[#261916]/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Title -->
+      <div class="max-w-3xl mx-auto text-center space-y-4 mb-12">
+        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#852f24]/10 text-[#852f24] text-xs font-mono font-medium">
+          <Sparkles className="w-3.5 h-3.5" />
+          <span>Design Your Companion</span>
+        </div>
+        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl text-[#261916] font-bold tracking-tight">
+          Handcrafted 1-Month & 3-Month Planners
+        </h2>
+        <p class="text-sm sm:text-base text-[#614f48] leading-relaxed">
+          Each notebook is cut, scored, and bound by Grace right here in Fort Frances. Pick your format, choose your favourite archival cover swatch, and customize with personal requests.
+        </p>
+
+        <!-- Feature Badges -->
+        <div class="flex flex-wrap justify-center items-center gap-4 pt-2 text-xs font-mono text-[#614f48]">
+          <span class="flex items-center gap-1.5">
+            <CheckCircle2 className="w-4 h-4 text-[#455a4a]" />
+            1-Month Edition ($10 CAD)
+          </span>
+          <span class="flex items-center gap-1.5">
+            <CheckCircle2 className="w-4 h-4 text-[#455a4a]" />
+            3-Month Edition ($20 CAD)
+          </span>
+          <span class="flex items-center gap-1.5">
+            <ShieldCheck className="w-4 h-4 text-[#455a4a]" />
+            Interac e-Transfer at Checkout
+          </span>
+        </div>
+      </div>
+
+      <!-- Interactive React Planner Customizer Island -->
+      <div class="max-w-5xl mx-auto">
+        <PlannerCustomizer client:load />
+      </div>
+
+      <!-- Quick FAQs / Order Details -->
+      <div class="mt-14 max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-6 text-left">
+        <div class="p-5 rounded-2xl bg-[#f4eee2] border border-[#261916]/10 space-y-2">
+          <div class="font-serif font-bold text-sm text-[#261916]">
+            Local Pickup
+          </div>
+          <p class="text-xs text-[#614f48] leading-relaxed">
+            Free pickup in Fort Frances or at our weekend market pop-up tables. Select "Local Pickup" during checkout.
+          </p>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-[#f4eee2] border border-[#261916]/10 space-y-2">
+          <div class="font-serif font-bold text-sm text-[#261916]">
+            Canada-Wide Shipping
+          </div>
+          <p class="text-xs text-[#614f48] leading-relaxed">
+            We happily ship anywhere in Canada via Canada Post. Shipping fee will be confirmed via email upon ordering.
+          </p>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-[#f4eee2] border border-[#261916]/10 space-y-2">
+          <div class="font-serif font-bold text-sm text-[#261916]">
+            Custom Personalization
+          </div>
+          <p class="text-xs text-[#614f48] leading-relaxed">
+            Need a specific cover motif, author quote, or gift dedication? Leave a note in the customization field above.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 3. Upcoming Market Dates -->
+  <MarketSchedule />
+
+  <!-- 4. Curated Used Books & Vintage Art -->
+  <BookShowcase />
+
+  <!-- 5. Story Behind The Stand -->
+  <StorySection />
+
+</BaseLayout>

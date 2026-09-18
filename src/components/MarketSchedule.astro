@@ -1,0 +1,189 @@
+---
+import { Calendar, MapPin, Clock, ArrowUpRight, Bell, Sparkles } from 'lucide-react';
+---
+
+<section id="schedule" class="py-16 md:py-24 bg-[#f4eee2] border-y border-[#261916]/10">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Section Header -->
+    <div class="max-w-3xl mx-auto text-center space-y-4 mb-12">
+      <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#852f24]/10 text-[#852f24] text-xs font-mono font-medium">
+        <Calendar className="w-3.5 h-3.5" />
+        <span>Market Tour & Pop-Up Stands</span>
+      </div>
+      <h2 class="font-serif text-3xl sm:text-4xl text-[#261916] font-bold tracking-tight">
+        Catch The Book Stop in Person
+      </h2>
+      <p class="text-sm sm:text-base text-[#614f48] leading-relaxed">
+        We love meeting fellow bookworms and stationery lovers face-to-face. Come flip through planners in person, browse curated vintage paperbacks, or just say hello!
+      </p>
+    </div>
+
+    <!-- Announcement Banner -->
+    <div class="max-w-4xl mx-auto mb-10 p-5 sm:p-6 rounded-2xl bg-[#fbf8f3] border-2 border-[#852f24]/20 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-start gap-4">
+        <div class="w-10 h-10 rounded-full bg-[#852f24]/10 text-[#852f24] flex items-center justify-center shrink-0 mt-0.5">
+          <Bell className="w-5 h-5" />
+        </div>
+        <div class="text-left">
+          <h3 class="font-serif font-bold text-base text-[#261916]">
+            Upcoming Dates Being Scheduled!
+          </h3>
+          <p class="text-xs text-[#614f48] mt-1">
+            Grace is setting the schedule for upcoming community markets in Fort Frances and surrounding Rainy River communities. Follow our Facebook page or text Grace directly for this weekend's booth location.
+          </p>
+        </div>
+      </div>
+      <a
+        href="https://www.facebook.com/profile.php?id=100075995475117"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="shrink-0 inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full bg-[#852f24] hover:bg-[#6e241b] text-[#fbf8f3] text-xs font-serif font-medium shadow-xs transition-colors"
+      >
+        <span>Facebook Updates</span>
+        <ArrowUpRight className="w-3.5 h-3.5" />
+      </a>
+    </div>
+
+    <!-- Schedule Cards Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+      
+      <!-- Card 1: Fort Frances Pop-Up -->
+      <div class="bg-[#fbf8f3] rounded-2xl p-6 border border-[#261916]/10 shadow-xs flex flex-col justify-between">
+        <div class="space-y-3">
+          <div class="flex justify-between items-center">
+            <span class="px-2.5 py-1 rounded-md bg-[#455a4a]/10 text-[#455a4a] text-xs font-mono font-bold">
+              Upcoming
+            </span>
+            <span class="text-xs font-mono text-[#852f24]">Fort Frances, ON</span>
+          </div>
+          <h3 class="font-serif font-bold text-lg text-[#261916]">
+            Fort Frances Community Market
+          </h3>
+          <div class="space-y-1.5 text-xs text-[#614f48]">
+            <div class="flex items-center gap-2">
+              <Calendar className="w-3.5 h-3.5 text-[#852f24]" />
+              <span>Spring 2026 Pop-Up (Date TBA)</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <MapPin className="w-3.5 h-3.5 text-[#852f24]" />
+              <span>Fort Frances Public Library / Grounds</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <Clock className="w-3.5 h-3.5 text-[#852f24]" />
+              <span>10:00 AM – 3:00 PM</span>
+            </div>
+          </div>
+          <p class="text-xs text-[#614f48] pt-2 border-t border-[#261916]/5">
+            Full planner station, custom cover requests, and pre-loved books table.
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 2: The Flint House Market -->
+      <div class="bg-[#fbf8f3] rounded-2xl p-6 border border-[#261916]/10 shadow-xs flex flex-col justify-between">
+        <div class="space-y-3">
+          <div class="flex justify-between items-center">
+            <span class="px-2.5 py-1 rounded-md bg-[#c28731]/20 text-[#852f24] text-xs font-mono font-bold">
+              Outdoor / Indoor
+            </span>
+            <span class="text-xs font-mono text-[#852f24]">Fort Frances, ON</span>
+          </div>
+          <h3 class="font-serif font-bold text-lg text-[#261916]">
+            Flint House Maker Market
+          </h3>
+          <div class="space-y-1.5 text-xs text-[#614f48]">
+            <div class="flex items-center gap-2">
+              <Calendar className="w-3.5 h-3.5 text-[#852f24]" />
+              <span>Weekend Market Series (TBA)</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <MapPin className="w-3.5 h-3.5 text-[#852f24]" />
+              <span>272 Scott St, Fort Frances, ON</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <Clock className="w-3.5 h-3.5 text-[#852f24]" />
+              <span>Weekend Pop-Up Hours</span>
+            </div>
+          </div>
+          <p class="text-xs text-[#614f48] pt-2 border-t border-[#261916]/5">
+            Handcrafted notebooks, framed vintage prints, and curated novels.
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 3: Custom Bookings & Pickups -->
+      <div class="bg-[#fbf8f3] rounded-2xl p-6 border border-[#261916]/10 shadow-xs flex flex-col justify-between">
+        <div class="space-y-3">
+          <div class="flex justify-between items-center">
+            <span class="px-2.5 py-1 rounded-md bg-[#852f24]/10 text-[#852f24] text-xs font-mono font-bold">
+              Always Open
+            </span>
+            <span class="text-xs font-mono text-[#852f24]">Direct Orders</span>
+          </div>
+          <h3 class="font-serif font-bold text-lg text-[#261916]">
+            Local Pickup & Custom Orders
+          </h3>
+          <div class="space-y-1.5 text-xs text-[#614f48]">
+            <div class="flex items-center gap-2">
+              <Sparkles className="w-3.5 h-3.5 text-[#852f24]" />
+              <span>Order Online Anytime</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <MapPin className="w-3.5 h-3.5 text-[#852f24]" />
+              <span>Fort Frances Townsite Pickup</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <Clock className="w-3.5 h-3.5 text-[#852f24]" />
+              <span>Coordinated at your convenience</span>
+            </div>
+          </div>
+          <p class="text-xs text-[#614f48] pt-2 border-t border-[#261916]/5">
+            Order online today and select “Local Pickup” at checkout to skip shipping fees.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Real Market Photos Strip -->
+    <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto">
+      <div class="relative aspect-16/10 rounded-xl overflow-hidden border border-[#261916]/15 shadow-xs">
+        <img
+          src="/images/market-setup.jpg"
+          alt="The Book Stop Market Pop-up Setup"
+          class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+          loading="lazy"
+        />
+        <div class="absolute bottom-2 left-2 bg-black/60 backdrop-blur-xs text-white px-2.5 py-1 rounded text-[11px] font-serif">
+          Flint House Setup
+        </div>
+      </div>
+
+      <div class="relative aspect-16/10 rounded-xl overflow-hidden border border-[#261916]/15 shadow-xs">
+        <img
+          src="/images/bookshelf-sign.jpg"
+          alt="Hand-painted Bookshelf Sign"
+          class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+          loading="lazy"
+        />
+        <div class="absolute bottom-2 left-2 bg-black/60 backdrop-blur-xs text-white px-2.5 py-1 rounded text-[11px] font-serif">
+          Hand-painted Easel Sign
+        </div>
+      </div>
+
+      <div class="relative aspect-16/10 rounded-xl overflow-hidden border border-[#261916]/15 shadow-xs sm:col-span-2 lg:col-span-1">
+        <img
+          src="/images/grace-booth.jpg"
+          alt="Grace at The Book Stop Library Booth"
+          class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+          loading="lazy"
+        />
+        <div class="absolute bottom-2 left-2 bg-black/60 backdrop-blur-xs text-white px-2.5 py-1 rounded text-[11px] font-serif">
+          Library Market Booth
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>

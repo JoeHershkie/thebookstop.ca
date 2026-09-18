@@ -1,0 +1,98 @@
+---
+import { Heart, Newspaper, Users, Award, BookCheck } from 'lucide-react';
+---
+
+<section id="story" class="py-16 md:py-24 bg-[#f4eee2] border-t border-[#261916]/10">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      
+      <!-- Left Column: Story Images & Community Highlights -->
+      <div class="lg:col-span-6 space-y-4">
+        
+        <!-- Community Workshop Highlight Photo -->
+        <div class="relative rounded-3xl overflow-hidden border-2 border-[#261916]/10 shadow-md bg-white">
+          <div class="aspect-4/3 overflow-hidden">
+            <img
+              src="/images/community-workshop.jpg"
+              alt="Fort Frances Lakers hockey players customizing notebooks in workshop"
+              class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+              loading="lazy"
+            />
+          </div>
+          <div class="p-4 sm:p-5 bg-[#fbf8f3] border-t border-[#261916]/10">
+            <div class="flex items-center gap-2 text-xs font-mono font-bold text-[#852f24] uppercase mb-1">
+              <Users className="w-4 h-4" />
+              <span>Community Workshops</span>
+            </div>
+            <p class="text-xs sm:text-sm text-[#614f48]">
+              Grace hosting a custom notebook-making workshop for the Fort Frances Lakers junior hockey team at the Fort Frances Public Library.
+            </p>
+          </div>
+        </div>
+
+        <!-- Mini Stats & Values Grid -->
+        <div class="grid grid-cols-2 gap-4">
+          <div class="p-4 rounded-2xl bg-[#fbf8f3] border border-[#261916]/10 shadow-xs">
+            <Newspaper className="w-5 h-5 text-[#852f24] mb-2" />
+            <h4 class="font-serif font-bold text-sm text-[#261916]">Fort Frances Times</h4>
+            <p class="text-[11px] text-[#614f48] mt-1">
+              Author of local literary reflections and community book columns.
+            </p>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-[#fbf8f3] border border-[#261916]/10 shadow-xs">
+            <BookCheck className="w-5 h-5 text-[#455a4a] mb-2" />
+            <h4 class="font-serif font-bold text-sm text-[#261916]">Handmade With Care</h4>
+            <p class="text-[11px] text-[#614f48] mt-1">
+              Every planner is scored, cut, bound, and inspected individually.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right Column: Narrative Story -->
+      <div class="lg:col-span-6 space-y-6">
+        
+        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#852f24]/10 text-[#852f24] text-xs font-mono font-medium">
+          <Heart className="w-3.5 h-3.5" />
+          <span>The Story Behind The Stand</span>
+        </div>
+
+        <h2 class="font-serif text-3xl sm:text-4xl text-[#261916] font-bold tracking-tight leading-tight">
+          Bringing the Warmth of Physical Books & Papercraft to Fort Frances
+        </h2>
+
+        <div class="space-y-4 text-sm sm:text-base text-[#614f48] leading-relaxed">
+          <p>
+            <strong class="text-[#261916]">The Book Stop</strong> was born from a deep love for stories, tangible paper, and community connection in Northwestern Ontario. Grace started binding notebooks and planners by hand as a way to create organizational tools that feel personal, warm, and inspiring to use every single day.
+          </p>
+
+          <p>
+            Unlike mass-produced digital calendars or sterile spiral notebooks, each Book Stop planner features hand-selected decorative archival paper—ranging from botanical illustrations and vintage cartography to pressed wildflowers and gold foil accents.
+          </p>
+
+          <p>
+            When Grace isn't binding planners or curating crates of used books for local pop-up markets, she contributes book-related columns to the <em>Fort Frances Times</em> and hosts interactive papercrafting workshops for youth and community groups across town.
+          </p>
+        </div>
+
+        <div class="pt-4 border-t border-[#261916]/10 flex items-center gap-4">
+          <div class="w-12 h-12 rounded-full overflow-hidden border border-[#852f24] shrink-0">
+            <img
+              src="/images/grace-booth.jpg"
+              alt="Grace smiling at market stand"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <div>
+            <div class="font-serif font-bold text-base text-[#261916]">Grace</div>
+            <div class="text-xs text-[#614f48]">Creator & Founder, The Book Stop</div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>

@@ -1,0 +1,123 @@
+---
+import { BookOpen, Frame, Sparkles, MessageSquare } from 'lucide-react';
+---
+
+<section id="books" class="py-16 md:py-24 bg-[#fbf8f3]">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Section Header -->
+    <div class="max-w-3xl mx-auto text-center space-y-4 mb-14">
+      <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#455a4a]/10 text-[#455a4a] text-xs font-mono font-medium">
+        <BookOpen className="w-3.5 h-3.5" />
+        <span>In-Person Market Collections</span>
+      </div>
+      <h2 class="font-serif text-3xl sm:text-4xl text-[#261916] font-bold tracking-tight">
+        Curated Pre-Loved Books & Framed Vintage Art
+      </h2>
+      <p class="text-sm sm:text-base text-[#614f48] leading-relaxed">
+        Beyond our custom handmade planners, The Book Stop curates an ever-evolving selection of quality used books and framed vintage prints. Find these treasures at every market stand.
+      </p>
+    </div>
+
+    <!-- 2 Column Feature Grid -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-12">
+      
+      <!-- Feature 1: Used Books -->
+      <div class="bg-[#f4eee2] rounded-3xl p-6 sm:p-8 border border-[#261916]/10 shadow-xs space-y-6">
+        <div class="relative aspect-4/3 rounded-2xl overflow-hidden border border-[#261916]/10 shadow-sm bg-white">
+          <img
+            src="/images/used-books-table.jpg"
+            alt="Curated used books table display at market"
+            class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+            loading="lazy"
+          />
+          <div class="absolute top-3 left-3 bg-[#455a4a] text-[#fbf8f3] text-xs font-mono font-bold px-3 py-1 rounded-full shadow-xs">
+            Curated Literature
+          </div>
+        </div>
+
+        <div class="space-y-3">
+          <h3 class="font-serif font-bold text-2xl text-[#261916]">
+            Carefully Selected Used Books
+          </h3>
+          <p class="text-xs sm:text-sm text-[#614f48] leading-relaxed">
+            Every title in our crates is hand-selected, cleaned, and checked. We carry everything from beloved classics, modern literary fiction, and mysteries to regional Northern Ontario history and nature guides.
+          </p>
+          <div class="flex flex-wrap gap-2 pt-1">
+            <span class="px-2.5 py-1 bg-white border border-[#261916]/10 rounded-lg text-xs text-[#261916]">
+              Classic Paperbacks
+            </span>
+            <span class="px-2.5 py-1 bg-white border border-[#261916]/10 rounded-lg text-xs text-[#261916]">
+              Thrillers & Fiction
+            </span>
+            <span class="px-2.5 py-1 bg-white border border-[#261916]/10 rounded-lg text-xs text-[#261916]">
+              Poetry & Memoirs
+            </span>
+            <span class="px-2.5 py-1 bg-white border border-[#261916]/10 rounded-lg text-xs text-[#261916]">
+              Pocket Editions
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature 2: Framed Vintage Art Prints -->
+      <div class="bg-[#f4eee2] rounded-3xl p-6 sm:p-8 border border-[#261916]/10 shadow-xs space-y-6">
+        <div class="relative aspect-4/3 rounded-2xl overflow-hidden border border-[#261916]/10 shadow-sm bg-white">
+          <img
+            src="/images/art-prints.jpg"
+            alt="Framed vintage art prints and botanical sketches"
+            class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+            loading="lazy"
+          />
+          <div class="absolute top-3 left-3 bg-[#852f24] text-[#fbf8f3] text-xs font-mono font-bold px-3 py-1 rounded-full shadow-xs">
+            $5 – $25 CAD
+          </div>
+        </div>
+
+        <div class="space-y-3">
+          <h3 class="font-serif font-bold text-2xl text-[#261916]">
+            Framed Vintage Art Prints
+          </h3>
+          <p class="text-xs sm:text-sm text-[#614f48] leading-relaxed">
+            Add warmth to your desk, bookshelf, or gallery wall. Grace sources authentic vintage botanical plates, antique sketches, and classic illustrations, framing each piece ready to hang or display.
+          </p>
+          <div class="flex flex-wrap gap-2 pt-1">
+            <span class="px-2.5 py-1 bg-white border border-[#261916]/10 rounded-lg text-xs text-[#261916]">
+              Antique Botanicals
+            </span>
+            <span class="px-2.5 py-1 bg-white border border-[#261916]/10 rounded-lg text-xs text-[#261916]">
+              Heritage Wood Frames
+            </span>
+            <span class="px-2.5 py-1 bg-white border border-[#261916]/10 rounded-lg text-xs text-[#261916]">
+              Mini Easel Displays
+            </span>
+            <span class="px-2.5 py-1 bg-white border border-[#261916]/10 rounded-lg text-xs text-[#261916]">
+              Affordable Gift Art
+            </span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Inquire Callout Box -->
+    <div class="p-6 sm:p-8 rounded-2xl bg-[#852f24]/5 border border-[#852f24]/20 flex flex-col sm:flex-row items-center justify-between gap-6 max-w-5xl mx-auto">
+      <div class="space-y-1 text-center sm:text-left">
+        <h4 class="font-serif font-bold text-lg text-[#261916]">
+          Looking for a specific book title or art piece?
+        </h4>
+        <p class="text-xs sm:text-sm text-[#614f48]">
+          Grace keeps a local wish-list for customers and scouts used book sales across the region. Let us know what you are looking for!
+        </p>
+      </div>
+      <a
+        href="mailto:graciep910@gmail.com?subject=Book%20or%20Art%20Inquiry%20-%20The%20Book%20Stop"
+        class="shrink-0 inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#852f24] hover:bg-[#6e241b] text-[#fbf8f3] font-serif text-sm font-medium transition-colors cursor-pointer"
+      >
+        <MessageSquare className="w-4 h-4" />
+        <span>Ask Grace About a Book</span>
+      </a>
+    </div>
+
+  </div>
+</section>
