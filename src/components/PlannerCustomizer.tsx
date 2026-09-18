@@ -93,7 +93,7 @@ export default function PlannerCustomizer() {
   };
 
   return (
-    <div className="bg-[#fcfaf7] border border-[#261916]/10 rounded-2xl p-6 md:p-10 shadow-sm">
+    <div className="bg-[#fcfaf7] border border-[#261916]/10 rounded-2xl p-4 sm:p-6 md:p-10 shadow-sm">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
         
         {/* Left Column: Visual Preview & Details */}
@@ -231,13 +231,10 @@ export default function PlannerCustomizer() {
                         )}
                       </div>
 
-                      <div className="min-w-0 pr-1">
-                        <div className="text-xs font-bold text-[#261916] truncate">
+                      <div className="min-w-0 flex-1 pr-1">
+                        <span className="block text-xs font-bold text-[#261916] leading-snug">
                           {cover.name}
-                        </div>
-                        <div className="text-[11px] text-[#614f48] line-clamp-1">
-                          {cover.badge || 'Handmade'}
-                        </div>
+                        </span>
                       </div>
                     </button>
                   );

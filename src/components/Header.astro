@@ -4,20 +4,20 @@ import CartToggle from './CartToggle';
 
 <header class="sticky top-0 z-40 w-full border-b border-[#261916]/10 bg-[#fbf8f3]/90 backdrop-blur-md transition-all">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex items-center justify-between h-20">
+    <div class="flex items-center justify-between h-16 sm:h-20">
       
       <!-- Brand Logo & Title -->
-      <a href="/" class="flex items-center gap-3.5 group">
+      <a href="/" class="flex items-center gap-2.5 sm:gap-3.5 group">
         <img
           src="/images/logo.png"
           alt="The Book Stop Logo"
-          class="w-12 h-12 shrink-0 object-contain group-hover:scale-105 transition-transform duration-200"
+          class="w-10 h-10 sm:w-12 sm:h-12 shrink-0 object-contain group-hover:scale-105 transition-transform duration-200"
         />
         <div>
-          <span class="font-serif font-bold text-xl sm:text-2xl text-[#261916] tracking-tight group-hover:text-[#852f24] transition-colors">
+          <span class="font-serif font-bold text-lg sm:text-2xl text-[#261916] tracking-tight group-hover:text-[#852f24] transition-colors leading-tight block">
             The Book Stop
           </span>
-          <span class="block text-[10px] font-mono tracking-widest text-[#852f24] uppercase">
+          <span class="block text-[9px] sm:text-[10px] font-mono tracking-widest text-[#852f24] uppercase">
             Fort Frances, Ontario
           </span>
         </div>
@@ -43,7 +43,7 @@ import CartToggle from './CartToggle';
       </nav>
 
       <!-- Cart Toggle & Mobile Menu Trigger -->
-      <div class="flex items-center gap-3">
+      <div class="flex items-center gap-2 sm:gap-3">
         <CartToggle client:load />
 
         <button
@@ -51,9 +51,13 @@ import CartToggle from './CartToggle';
           type="button"
           class="md:hidden p-2 rounded-xl text-[#261916] hover:bg-[#852f24]/10 transition-colors cursor-pointer"
           aria-label="Toggle mobile menu"
+          aria-expanded="false"
         >
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+          <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
           </svg>
         </button>
       </div>
@@ -62,20 +66,20 @@ import CartToggle from './CartToggle';
   </div>
 
   <!-- Mobile Dropdown Menu -->
-  <div id="mobile-menu" class="hidden md:hidden border-t border-[#261916]/10 bg-[#f8f4ee] px-4 pt-3 pb-6 space-y-3">
-    <a href="#planners" class="block py-2 text-base font-serif font-medium text-[#261916] hover:text-[#852f24] mobile-link">
+  <div id="mobile-menu" class="hidden md:hidden border-t border-[#261916]/10 bg-[#f8f4ee] px-4 pt-3 pb-6 space-y-1">
+    <a href="#planners" class="block py-2.5 px-2 text-base font-serif font-medium text-[#261916] hover:text-[#852f24] hover:bg-[#852f24]/5 rounded-lg mobile-link">
       Planners & Notebooks
     </a>
-    <a href="#schedule" class="block py-2 text-base font-serif font-medium text-[#261916] hover:text-[#852f24] mobile-link">
+    <a href="#schedule" class="block py-2.5 px-2 text-base font-serif font-medium text-[#261916] hover:text-[#852f24] hover:bg-[#852f24]/5 rounded-lg mobile-link">
       Market Dates
     </a>
-    <a href="#books" class="block py-2 text-base font-serif font-medium text-[#261916] hover:text-[#852f24] mobile-link">
+    <a href="#books" class="block py-2.5 px-2 text-base font-serif font-medium text-[#261916] hover:text-[#852f24] hover:bg-[#852f24]/5 rounded-lg mobile-link">
       Books & Vintage Art
     </a>
-    <a href="#story" class="block py-2 text-base font-serif font-medium text-[#261916] hover:text-[#852f24] mobile-link">
+    <a href="#story" class="block py-2.5 px-2 text-base font-serif font-medium text-[#261916] hover:text-[#852f24] hover:bg-[#852f24]/5 rounded-lg mobile-link">
       About Grace
     </a>
-    <a href="#contact" class="block py-2 text-base font-serif font-medium text-[#261916] hover:text-[#852f24] mobile-link">
+    <a href="#contact" class="block py-2.5 px-2 text-base font-serif font-medium text-[#261916] hover:text-[#852f24] hover:bg-[#852f24]/5 rounded-lg mobile-link">
       Contact
     </a>
   </div>
@@ -84,17 +88,31 @@ import CartToggle from './CartToggle';
 <script>
   const btn = document.getElementById('mobile-menu-btn');
   const menu = document.getElementById('mobile-menu');
+  const hamburgerIcon = document.getElementById('hamburger-icon');
+  const closeIcon = document.getElementById('close-icon');
   const links = document.querySelectorAll('.mobile-link');
 
   if (btn && menu) {
-    btn.addEventListener('click', () => {
-      menu.classList.toggle('hidden');
-    });
+    const toggleMenu = (open?: boolean) => {
+      const isHidden = menu.classList.contains('hidden');
+      const shouldOpen = open !== undefined ? open : isHidden;
+      if (shouldOpen) {
+        menu.classList.remove('hidden');
+        hamburgerIcon?.classList.add('hidden');
+        closeIcon?.classList.remove('hidden');
+        btn.setAttribute('aria-expanded', 'true');
+      } else {
+        menu.classList.add('hidden');
+        hamburgerIcon?.classList.remove('hidden');
+        closeIcon?.classList.add('hidden');
+        btn.setAttribute('aria-expanded', 'false');
+      }
+    };
+
+    btn.addEventListener('click', () => toggleMenu());
 
     links.forEach(link => {
-      link.addEventListener('click', () => {
-        menu.classList.add('hidden');
-      });
+      link.addEventListener('click', () => toggleMenu(false));
     });
   }
 </script>
